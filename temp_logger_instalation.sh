@@ -20,4 +20,4 @@ cd ./temp_humidity_logger
 wget https://raw.githubusercontent.com/jpBane/RaspberryPi_temp_logger/main/temp_humidity_logger.py
 
 # Make sure the script starts when the PiZero is booted.
-(crontab -; echo "@reboot /usr/bin/python3 /home/pi/temp_humidity_logger/temp_humidity_logger.py") | sort -u | crontab -
+(crontab -l; echo "@reboot /usr/bin/python3 /home/pi/temp_humidity_logger/temp_humidity_logger.py") | sort -u | crontab -
