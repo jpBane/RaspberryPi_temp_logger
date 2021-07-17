@@ -16,7 +16,7 @@ except:
 while True:
  humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
  if humidity is not None and temperature is not None:
-  f.write("{0},{1:0.1f},{2:0.1f}\r\n\".format(time.strftime("%Y-%m-%d %H:%M:%S"), temperature, humidity))
+  f.write("{0},{1:0.1f},{2:0.1f}\r\n".format(time.strftime("%Y-%m-%d %H:%M:%S"), temperature, humidity))
  else:
   print("Failed to retrieve data from humidity sensor")
  
