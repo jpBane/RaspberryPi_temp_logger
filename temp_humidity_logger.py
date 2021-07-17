@@ -7,7 +7,7 @@ DHT_PIN = 4
 
 try:
  f = open("/home/pi/temp_humidity_logger/temp_humidity.csv", "a+")
- if os.stat("/home/pi/temp_humidity_logger/temp_humidty.csv").st_size == 0:
+ if os.stat("/home/pi/temp_humidity_logger/temp_humidity.csv").st_size == 0:
   f.write("Timestamp,Temperature_C,Humidity_pct\r\n")
   
 except:
