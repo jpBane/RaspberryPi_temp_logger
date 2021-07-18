@@ -6,6 +6,8 @@ I wanted to be able to quickly set up a temperature and humidity logger using a 
 ## Preparation
 Starting point is a fresh installation of Raspberry Pi OS Lite on a Raspberry Pi Zero. When you choose the "Lite" version of the OS like I did, you need to do some preparations like [enabling SSH](https://howchoo.com/g/ote0ywmzywj/how-to-enable-ssh-on-raspbian-without-a-screen) and [seting up a Wifi without a monitor](https://howchoo.com/g/ndy1zte2yjn/how-to-set-up-wifi-on-your-raspberry-pi-without-ethernet) before putting the micro SD card in your Raspberry Pi Zero so that you can SSH into it. In case you choose the version "with desktop", you can connect a screen and a keyboard to your Raspberry Pi Zero and directly begin. 
 
+If you are not shure how to connect the sensor to your Raspberry Pi Zero, you might find some help [here](https://medium.com/initial-state/build-an-inexpensive-network-of-web-connected-temperature-sensors-using-pi-zeros-730a40f1fb60).
+
 ## Installation
 The "temp_logger_installation.sh" does the following things automatically: 
 * updating all packages via the advanced package tool (APT)
