@@ -10,11 +10,9 @@ client.switch_database('temp_logger_db')
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
 
-humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
-
-# ...
-
+# Write the data to the database
 while True:
+ humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
  if humidity is not None and temperature is not None:
   json_body = [
     {
