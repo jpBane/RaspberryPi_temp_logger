@@ -4,8 +4,7 @@ import time
 import Adafruit_DHT 
 
 # Define the variables
-client = InfluxDBClient(host='localhost', port=8086)
-client.switch_database('temp_logger_db')
+client = InfluxDBClient(host='localhost', port=8086, database='temp_logger_db')
 
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
