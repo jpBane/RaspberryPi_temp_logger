@@ -27,4 +27,4 @@ if humidity is not None and temperature is not None:
 else:
  print("Failed to retrieve data from humidity sensor")
 
- client.write_points(json_body, time_precision='s')
+client.write_points(json_body, time_precision='s')
