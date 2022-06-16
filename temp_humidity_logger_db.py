@@ -10,10 +10,9 @@ DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
 
 # Write the data to the database
-while True:
- humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
- if humidity is not None and temperature is not None:
-  json_body = [
+humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+if humidity is not None and temperature is not None:
+ json_body = [
     {
         "measurement": "temp_humidity",
         "tags": {
@@ -24,10 +23,8 @@ while True:
             "humidity": round(humidity, ndigits = 1)            
         }
     }
-  ]
- else:
-  print("Failed to retrieve data from humidity sensor")
+ ]
+else:
+ print("Failed to retrieve data from humidity sensor")
 
  client.write_points(json_body, time_precision='s')
-
- time.sleep(60)
